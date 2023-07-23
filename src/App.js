@@ -1,12 +1,14 @@
 import React, {useState} from "react";
 import axios from 'axios';
 import humid from './assets/air_FILL0.png'
+import WEATHER_API from './.env.local'
 
 function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
+  const apikey =  process.env.WEATHER_API
   
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=3f9aa1a0f7c98bf85adf769f81323aaf&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikey}&units=metric`;
   
 
   const searchLocation = (event) => {
