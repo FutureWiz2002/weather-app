@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios';
+import humid from './assets/air_FILL0.png'
 
 function App() {
   const [data, setData] = useState({});
@@ -54,7 +55,7 @@ function App() {
             </div>
           <div className="wind">
             {data.wind ? <p className="bold">{data.wind.speed.toFixed(1)} km/h</p> :  null}
-            <p className="bold">Wind Speed</p>
+            <img src={humid} />
           </div>
 
         </div>

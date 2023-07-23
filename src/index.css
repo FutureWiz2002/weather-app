@@ -26,7 +26,7 @@ h1 {
 
 .app {
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   position: relative;
   background-color: rgb(104, 104, 104);
   color: white;
