@@ -26,11 +26,8 @@ function App() {
   // Thunder - 657268 
   // Snow - 5DBBE1
   // mist, Haze - CDD8D9
-
-
   
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikeys}&units=metric`;
-  
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -54,7 +51,7 @@ function App() {
     Haze: Haze,
     Mist: Haze,
     Clear: Sun,
-  };
+  }; // this contains the data and using this dictionary will replace the data from the url and call the image respectively. See line 87
 
   const colour = {
     Clouds: '#9C928F',
@@ -64,7 +61,7 @@ function App() {
     Haze: '#8EAFB3',
     Mist: '#8EAFB3',
     Clear: '#5DBBE1',
-  }
+  } // Similar to previous comment, receives the data from the url/api and changes the background color with it. See line 68
   
 
   return (
@@ -93,7 +90,7 @@ function App() {
         </div>
 
 
-        {data.name !== undefined &&
+        {data.name !== undefined && // This && section is an if statement, without the else part (single condition).
         <div className="bottom">
           <div className="feels">
             <img src={feels_like}  style={{ width: '30px', height: '30px' }}/>
