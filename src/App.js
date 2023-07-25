@@ -19,9 +19,15 @@ function App() {
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
   const [weatherCondition, setWeatherCondition] = useState(null);
-  const [backgroundColor, setBackgroundColor] = useState('#ffffff');
   
-  //color palette
+  // color palette clear 
+  // Clear - 5DBBE1
+  // Rain - 657268 
+  // Thunder - 657268 
+  // Snow - 5DBBE1
+  // mist, Haze - CDD8D9
+
+
   
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apikeys}&units=metric`;
   
@@ -44,15 +50,25 @@ function App() {
     Clouds: Clouds,
     Rain: Rain,
     Snow: Snow,
-    Light: Light,
+    Thunderstorm: Light,
     Haze: Haze,
     Mist: Haze,
     Clear: Sun,
   };
+
+  const colour = {
+    Clouds: '#9C928F',
+    Rain: '#9C928F',
+    Snow: '#9C928F',
+    Thunderstorm: '#9C928F',
+    Haze: '#8EAFB3',
+    Mist: '#8EAFB3',
+    Clear: '#5DBBE1',
+  }
   
 
   return (
-    <div className="app" style={{ backgroundColor: backgroundColor}}>
+    <div className="app" style={{ backgroundColor: colour[weatherCondition]}}>
       <div className="search">
         <input
         value={location}
