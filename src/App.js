@@ -78,7 +78,7 @@ function App() {
         <div className="top">
           <div className="location"><p className="bold">{data.name}</p></div>
           <div className="temp">
-            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null} // .toFixed returns a rounded value. 
           </div>
           <div className="desc">
             {data.weather ? <p className="bold">{data.weather[0].main}</p> : null}
