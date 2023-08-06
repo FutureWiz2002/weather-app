@@ -12,7 +12,7 @@ import Sun from './assets/Sun.svg'
 
 
 // import WEATHER_API from './.env.local'
-document.body.style.backgroundColor = "red";
+// document.body.style.backgroundColor = "red";
 
 function App() {
   const apikeys = process.env.REACT_APP_WEATHER_API
