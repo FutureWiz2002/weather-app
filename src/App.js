@@ -78,7 +78,7 @@ function App() {
       </div>
       <div className="container">
         <div className="top">
-          <div className="location"><p className="bold">{data.name}, {country}</p></div>
+          <div className="location"><p className="bold">{data.name} {country}</p></div>
           <div className="temp">
             {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
