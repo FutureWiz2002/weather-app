@@ -18,6 +18,7 @@ function App() {
   const apikeys = process.env.REACT_APP_WEATHER_API
   const [data, setData] = useState({});
   const [location, setLocation] = useState('');
+  const [country, setCountry] = useState('');
   const [weatherCondition, setWeatherCondition] = useState(null);
   
   // color palette clear 
@@ -35,6 +36,7 @@ function App() {
       axios.get(url).then((response) => {
         setData(response.data)
         setWeatherCondition(response.data.weather[0].main)
+        setCountry(response.data.sys.country)
         console.log(response.data)
       })
       setLocation("");
@@ -76,7 +78,7 @@ function App() {
       </div>
       <div className="container">
         <div className="top">
-          <div className="location"><p className="bold">{data.name}</p></div>
+          <div className="location"><p className="bold">{data.name}, {country}</p></div>
           <div className="temp">
             {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
