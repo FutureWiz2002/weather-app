@@ -91,4 +91,6 @@ h1 {
 .weather-image {
 
   margin: 20px auto;
+  border: none;
+  border-radius: 10;
 }

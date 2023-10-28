@@ -86,8 +86,7 @@ function App() {
             {data.weather ? <p className="bold">{data.weather[0].main}</p> : null}
           </div>
           <div className="weather-image">
-            <img src={weatherImages[weatherCondition]} alt={weatherCondition} style={{ width: '60px', height: '60px' }}
- />  
+            <img src={weatherImages[weatherCondition]} alt={weatherCondition} style={{ width: '60px', height: '60px' }} />  
           </div>
         </div>
 
